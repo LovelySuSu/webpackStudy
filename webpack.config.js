@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
     mode: "development",
     entry: "./src/index.js", // 路径相对于webpack.config.js
@@ -34,11 +35,14 @@ module.exports = {
             ]
         }]
     },
-    plugins: [new HtmlWebpackPlugin({
+    plugins: [
+        new HtmlWebpackPlugin({
         template: 'src/index.html'
-    })],
+        }),
+        new CleanWebpackPlugin(['bundle'])
+    ],
     output: {
         path: path.resolve(__dirname, 'bundle'),// 绝对路径+bundle文件夹
-        filename: 'bundle.js'
+        filename: 'dist.js'
     }
 }
