@@ -6,6 +6,12 @@ module.exports = {
     // entry: {
     //         main: './src/index.js'
     // },
+    module: {
+        rules: [{
+            test: /\.jpg$/,
+            use: 'file-loader'
+        }]
+    },
     output: {
         path: path.resolve(__dirname,'bundle'),// 绝对路径+bundle文件夹
         filename: 'bundle.js'

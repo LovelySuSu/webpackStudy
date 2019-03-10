@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/avatar.jpg":
+/*!************************!*\
+  !*** ./src/avatar.jpg ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"bd7a45571e4b5ccb8e7c33b7ce27070a.jpg\";\n\n//# sourceURL=webpack:///./src/avatar.jpg?");
+
+/***/ }),
+
 /***/ "./src/content.js":
 /*!************************!*\
   !*** ./src/content.js ***!
@@ -118,7 +129,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidebar */ \"./src/sidebar.js\");\n/* harmony import */ var _content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./content */ \"./src/content.js\");\n\n\n\n\nnew _header__WEBPACK_IMPORTED_MODULE_0__[\"default\"]()\nnew _sidebar__WEBPACK_IMPORTED_MODULE_1__[\"default\"]()\nnew _content__WEBPACK_IMPORTED_MODULE_2__[\"default\"]()\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidebar */ \"./src/sidebar.js\");\n/* harmony import */ var _content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./content */ \"./src/content.js\");\n/* harmony import */ var _avatar_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./avatar.jpg */ \"./src/avatar.jpg\");\n/* harmony import */ var _avatar_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_avatar_jpg__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nnew _header__WEBPACK_IMPORTED_MODULE_0__[\"default\"]()\nnew _sidebar__WEBPACK_IMPORTED_MODULE_1__[\"default\"]()\nnew _content__WEBPACK_IMPORTED_MODULE_2__[\"default\"]()\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
