@@ -2,7 +2,7 @@
 // import Sidebar from './sidebar'
 // import Content from './content'
 import avatar from './avatar.jpg'
-import './index.css'
+import './index.scss'
 
 // new Header()
 // new Sidebar()
