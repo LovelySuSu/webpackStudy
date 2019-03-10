@@ -7,8 +7,9 @@ module.exports = {
     // 等同于
     entry: {
             main: './src/index.js',
-            sub: './src/index.js'
+            // sub: './src/index.js'
     },
+    devtool: "none",
     module: {
         rules: [{
             test: /\.(jpg|png|gif)$/,
@@ -43,7 +44,7 @@ module.exports = {
         new CleanWebpackPlugin()
     ],
     output: {
-        publicPath: "https://cdn.com.cn",
+        // publicPath: "https://cdn.com.cn",
         path: path.resolve(__dirname, 'bundle'),// 绝对路径+bundle文件夹
         filename: '[name].js'
     }
