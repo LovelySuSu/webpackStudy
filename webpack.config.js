@@ -24,7 +24,8 @@ module.exports = {
                 {
                     loader: "css-loader",
                     options: {
-                        importLoaders: 2 // 通过import引入的scss文件也要走前两个loader
+                        importLoaders: 2 ,// 通过import引入的scss文件也要走前两个loader
+                        modules: true
                     }
                 },
                 'sass-loader',
