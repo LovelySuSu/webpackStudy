@@ -9,7 +9,7 @@ module.exports = {
             main: './src/index.js',
             // sub: './src/index.js'
     },
-    devtool: "none",
+    devtool: "source-map",
     module: {
         rules: [{
             test: /\.(jpg|png|gif)$/,
