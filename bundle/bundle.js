@@ -97,30 +97,6 @@ eval("module.exports = __webpack_require__.p + \"bd7a45571e4b5ccb8e7c33b7ce27070
 
 /***/ }),
 
-/***/ "./src/content.js":
-/*!************************!*\
-  !*** ./src/content.js ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Content; });\nfunction Content  () {\n    let dom = document.getElementById('root')\n    let child = document.createElement('div')\n    child.innerText = 'content'\n    dom.appendChild(child)\n}\n\n\n//# sourceURL=webpack:///./src/content.js?");
-
-/***/ }),
-
-/***/ "./src/header.js":
-/*!***********************!*\
-  !*** ./src/header.js ***!
-  \***********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Header; });\nfunction Header  () {\n    let dom = document.getElementById('root')\n    let child = document.createElement('div')\n    child.innerText = 'header'\n    dom.appendChild(child)\n}\n\n\n//# sourceURL=webpack:///./src/header.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -129,19 +105,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sidebar */ \"./src/sidebar.js\");\n/* harmony import */ var _content__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./content */ \"./src/content.js\");\n/* harmony import */ var _avatar_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./avatar.jpg */ \"./src/avatar.jpg\");\n/* harmony import */ var _avatar_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_avatar_jpg__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nnew _header__WEBPACK_IMPORTED_MODULE_0__[\"default\"]()\nnew _sidebar__WEBPACK_IMPORTED_MODULE_1__[\"default\"]()\nnew _content__WEBPACK_IMPORTED_MODULE_2__[\"default\"]()\n\n\n//# sourceURL=webpack:///./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/sidebar.js":
-/*!************************!*\
-  !*** ./src/sidebar.js ***!
-  \************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Siderbar; });\nfunction Siderbar  () {\n    let dom = document.getElementById('root')\n    let child = document.createElement('div')\n    child.innerText = 'sidebar'\n    dom.appendChild(child)\n}\n\n\n//# sourceURL=webpack:///./src/sidebar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _avatar_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./avatar.jpg */ \"./src/avatar.jpg\");\n/* harmony import */ var _avatar_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_avatar_jpg__WEBPACK_IMPORTED_MODULE_0__);\n// import Header from './header'\n// import Sidebar from './sidebar'\n// import Content from './content'\n\n\n// new Header()\n// new Sidebar()\n// new Content()\nlet img = new Image()\nimg.src = _avatar_jpg__WEBPACK_IMPORTED_MODULE_0___default.a\nlet root =document.getElementById('root')\nroot.append(img)\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
