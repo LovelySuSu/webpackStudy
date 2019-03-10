@@ -10,7 +10,7 @@ module.exports = {
         rules: [{
             test: /\.(jpg|png|gif)$/,
             use: {
-                loader: "file-loader",
+                loader: "url-loader",
                 options: {
                     name: '[name]_[hash].[ext]',
                     outputPath: 'images/'
