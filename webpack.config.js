@@ -34,8 +34,11 @@ module.exports = {
             ]
         }]
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new HtmlWebpackPlugin({
+        template: 'src/index.html'
+    })],
     output: {
-        path: path.resolve(__dirname,'bundle'),// 绝对路径+bundle文件夹
+        path: path.resolve(__dirname, 'bundle'),// 绝对路径+bundle文件夹
         filename: 'bundle.js'
+    }
 }
