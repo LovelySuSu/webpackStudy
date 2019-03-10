@@ -9,7 +9,12 @@ module.exports = {
     module: {
         rules: [{
             test: /\.jpg$/,
-            use: 'file-loader'
+            use: {
+                loader: "file-loader",
+                options: {
+                    name: '[name].[ext]'
+                }
+            }
         }]
     },
     output: {
