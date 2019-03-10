@@ -3,11 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
     mode: "development",
-    entry: "./src/index.js", // 路径相对于webpack.config.js
+    // entry: "./src/index.js", // 路径相对于webpack.config.js
     // 等同于
-    // entry: {
-    //         main: './src/index.js'
-    // },
+    entry: {
+            main: './src/index.js',
+            sub: './src/index.js'
+    },
     module: {
         rules: [{
             test: /\.(jpg|png|gif)$/,
@@ -39,10 +40,10 @@ module.exports = {
         new HtmlWebpackPlugin({
         template: 'src/index.html'
         }),
-        new CleanWebpackPlugin(['bundle'])
+        new CleanWebpackPlugin()
     ],
     output: {
         path: path.resolve(__dirname, 'bundle'),// 绝对路径+bundle文件夹
-        filename: 'dist.js'
+        filename: '[name].js'
     }
 }
