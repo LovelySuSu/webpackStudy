@@ -49,7 +49,7 @@ module.exports = {
         new CleanWebpackPlugin()
     ],
     output: {
-        // publicPath: "https://cdn.com.cn",
+        publicPath: "/",
         path: path.resolve(__dirname, 'build'),// 绝对路径+bundle文件夹
         filename: '[name].js'
     }
