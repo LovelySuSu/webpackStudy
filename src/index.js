@@ -5,7 +5,7 @@ import createAvatar from './createAvatar'
 import avatar from "./avatar.jpg";
 import style from './index.scss'
 
-new Header()
+// new Header()
 // new Sidebar()
 // new Content()
  createAvatar()

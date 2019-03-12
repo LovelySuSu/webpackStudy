@@ -10,6 +10,9 @@ module.exports = {
             // sub: './src/index.js'
     },
     devtool: "source-map",
+    devServer: {
+        contentBase: './build'
+    },
     module: {
         rules: [{
             test: /\.(jpg|png|gif)$/,
