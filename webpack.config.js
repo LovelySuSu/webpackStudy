@@ -11,7 +11,8 @@ module.exports = {
     },
     devtool: "source-map",
     devServer: {
-        contentBase: './build'
+        contentBase: './build',
+        open: true
     },
     module: {
         rules: [{
