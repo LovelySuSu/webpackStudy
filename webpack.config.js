@@ -13,9 +13,7 @@ module.exports = {
     devServer: {
         contentBase: './build',
         open: true,
-        proxy: {
-            '/api': 'http:localhost:3000'
-        }
+        port: 1314
     },
     module: {
         rules: [{
