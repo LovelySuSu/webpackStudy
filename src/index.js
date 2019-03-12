@@ -1,11 +1,11 @@
-// import Header from './header'
+import Header from './header'
 // import Sidebar from './sidebar'
 // import Content from './content'
 import createAvatar from './createAvatar'
 import avatar from "./avatar.jpg";
 import style from './index.scss'
 
-// new Header()
+new Header()
 // new Sidebar()
 // new Content()
  createAvatar()

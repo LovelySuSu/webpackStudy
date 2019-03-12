@@ -45,7 +45,7 @@ module.exports = {
     ],
     output: {
         // publicPath: "https://cdn.com.cn",
-        path: path.resolve(__dirname, 'bundle'),// 绝对路径+bundle文件夹
+        path: path.resolve(__dirname, 'build'),// 绝对路径+bundle文件夹
         filename: '[name].js'
     }
 }
