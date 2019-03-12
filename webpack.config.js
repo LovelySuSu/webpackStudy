@@ -12,7 +12,10 @@ module.exports = {
     devtool: "source-map",
     devServer: {
         contentBase: './build',
-        open: true
+        open: true,
+        proxy: {
+            '/api': 'http:localhost:3000'
+        }
     },
     module: {
         rules: [{
