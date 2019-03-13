@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const webpack = require('webpack')
 module.exports = {
     mode: "development",
     // entry: "./src/index.js", // 路径相对于webpack.config.js
@@ -13,7 +14,9 @@ module.exports = {
     devServer: {
         contentBase: './build',
         open: true,
-        port: 1314
+        port: 1314,
+        hot: true,
+        hotOnly: true
     },
     module: {
         rules: [{
@@ -27,17 +30,10 @@ module.exports = {
                 }
             }
         },{
-            test: /\.scss$/,
+            test: /\.css$/,
             use: [
                 'style-loader',
-                {
-                    loader: "css-loader",
-                    options: {
-                        importLoaders: 2 ,// 通过import引入的scss文件也要走前两个loader
-                        modules: true
-                    }
-                },
-                'sass-loader',
+                'css-loader',
                 'postcss-loader'
             ]
         }]
@@ -46,7 +42,8 @@ module.exports = {
         new HtmlWebpackPlugin({
         template: 'src/index.html'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ],
     output: {
         publicPath: "/",
