@@ -1,11 +1,6 @@
-import counter from './counter'
-import number from './number'
-counter()
-number()
+const arr = [
+    new Promise(() => {}),
+    new Promise(() => {})
+]
 
-if(module.hot) {
-    module.hot.accept('./number',() => {
-        document.body.removeChild(document.getElementById('number'))
-        number()
-    })
-}
+arr.map(item => console.log(item))

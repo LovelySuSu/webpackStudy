@@ -10,7 +10,7 @@ module.exports = {
             main: './src/index.js',
             // sub: './src/index.js'
     },
-    devtool: "source-map",
+    // devtool: "source-map",
     devServer: {
         contentBase: './build',
         open: true,
@@ -36,6 +36,13 @@ module.exports = {
                 'css-loader',
                 'postcss-loader'
             ]
+        },{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            options: {
+                presets: ["@babel/preset-env"]
+            }
         }]
     },
     plugins: [
