@@ -1,7 +1,10 @@
-// import "@babel/polyfill"
-const arr = [
-    new Promise(() => {}),
-    new Promise(() => {})
-]
+import "@babel/polyfill"
+import React,{ Component } from 'react'
+import ReactDom from 'react-dom'
+class App extends Component {
+    render() {
+        return <div>hello world</div>
+    }
+}
 
-arr.map(item => console.log(item))
+ReactDom.render(<App/>,document.getElementById('root'))
