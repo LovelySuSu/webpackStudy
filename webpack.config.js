@@ -43,7 +43,11 @@ module.exports = {
             options: {
                 presets: [["@babel/preset-env",{
                     // polyfill只添加业务代码用到的特性
-                    useBuiltIns: 'usage'
+                    useBuiltIns: 'usage',
+                    targets: {
+                        // 大于67版本的chrome上
+                        chrome: '67',
+                    }
                 }]]
             }
         }]
