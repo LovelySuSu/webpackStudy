@@ -41,7 +41,10 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader',
             options: {
-                presets: ["@babel/preset-env"]
+                presets: [["@babel/preset-env",{
+                    // polyfill只添加业务代码用到的特性
+                    useBuiltIns: 'usage'
+                }]]
             }
         }]
     },
