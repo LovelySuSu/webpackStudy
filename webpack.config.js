@@ -41,13 +41,19 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader',
             options: {
-                presets: [["@babel/preset-env",{
-                    // polyfill只添加业务代码用到的特性
-                    useBuiltIns: 'usage',
-                    targets: {
-                        // 大于67版本的chrome上
-                        chrome: '67',
-                    }
+                // presets: [["@babel/preset-env",{
+                //     // polyfill只添加业务代码用到的特性
+                //     useBuiltIns: 'usage',
+                //     targets: {
+                //         // 大于67版本的chrome上
+                //         chrome: '67',
+                //     }
+                // }]]
+                plugins: [["@babel/plugin-transform-runtime",{
+                    "corejs": 2,
+                    "helpers": true,
+                    "regenerator": true,
+                    "useESModules": false
                 }]]
             }
         }]
