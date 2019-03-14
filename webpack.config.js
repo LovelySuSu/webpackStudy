@@ -53,7 +53,6 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin()
     ],
     output: {
-        publicPath: "/",
         path: path.resolve(__dirname, 'build'),// 绝对路径+bundle文件夹
         filename: '[name].js'
     }
