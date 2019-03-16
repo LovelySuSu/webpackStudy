@@ -59,7 +59,8 @@ module.exports = {
             cacheGroups: {
                 vendors: {
                     test: /[\\/]node_modules[\\/]/,
-                    priority: -10
+                    priority: -10,
+                    filename: "vendors.js"
                 },
                 // default: {
                 //     minChunks: 2,
