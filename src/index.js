@@ -8,6 +8,7 @@
 // getComponent().then(element => document.body.appendChild(element))
 
 import _ from 'lodash'
+import $ from 'jquery'
 
 var element = document.createElement('div')
 element.innerHTML =_.join(['a','b','c'],'***')

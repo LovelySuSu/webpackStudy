@@ -67,14 +67,16 @@ module.exports = {
                 vendors: {
                     test: /[\\/]node_modules[\\/]/,
                     priority: -10,
-                    filename: "vendors.js"
+                    // filename: "vendors.js"
                 },
                 default: {
                     // minChunks: 2,
+                    // 优先级低于-10，所以node_modules里面用vendors
                     priority: -20,
+                    // 一个模块已经被引用过，就直接复用，不用再打包
                     reuseExistingChunk: true,
                     filename: "common.js"
-                }
+                },
                 // vendors: false,
                 // default: false
             }
