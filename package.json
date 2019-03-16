@@ -5,7 +5,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev-build": "webpack --config ./config/webpack.dev.js",
+    "dev": "webpack --config ./config/webpack.dev.js",
     "start": "webpack-dev-server --config ./config/webpack.dev.js",
     "build": "webpack --config ./config/webpack.prod.js"
   },
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
+    "loadash": "^1.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   },
