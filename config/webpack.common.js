@@ -4,7 +4,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
     entry: {
-        lodash: './src/lodash.js',
         main: './src/index.js',
     },
     module: {
@@ -43,5 +42,10 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, '../build'),// 绝对路径+bundle文件夹
         filename: '[name].js'
+    },
+    optimization: {
+        splitChunks: {
+            chunks: "all"
+        }
     }
 }
