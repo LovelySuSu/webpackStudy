@@ -53,7 +53,8 @@ module.exports = {
             minSize: 30000,
             // lodash 1mb,这里限定了最大值，就会对lodash进行二次拆分
             // maxSize: 50000,
-            minChunks: 1,
+            // 一个代码被引入至少多少次后才对其进行代码分割
+            minChunks: 2,
             maxAsyncRequests: 5,
             maxInitialRequests: 3,
             automaticNameDelimiter: '~',
