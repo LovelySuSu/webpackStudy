@@ -47,6 +47,7 @@ module.exports = {
         // splitChunks: {},
         // 等价于
         splitChunks: {
+            // 代码分割时只对异步代码生效，同步 import lodash 不进行代码分割
             chunks: 'async',
             minSize: 30000,
             maxSize: 0,
@@ -56,15 +57,17 @@ module.exports = {
             automaticNameDelimiter: '~',
             name: true,
             cacheGroups: {
-                vendors: {
-                    test: /[\\/]node_modules[\\/]/,
-                    priority: -10
-                },
-                default: {
-                    minChunks: 2,
-                    priority: -20,
-                    reuseExistingChunk: true
-                }
+                // vendors: {
+                //     test: /[\\/]node_modules[\\/]/,
+                //     priority: -10
+                // },
+                // default: {
+                //     minChunks: 2,
+                //     priority: -20,
+                //     reuseExistingChunk: true
+                // }
+                vendors: false,
+                default: false
             }
         }
     }
