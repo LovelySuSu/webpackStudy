@@ -3,14 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
 module.exports = {
-    mode: "production",
+    mode: "development",
     // entry: "./src/index.js", // 路径相对于webpack.config.js
     // 等同于
     entry: {
-            main: './src/index.js',
-            // sub: './src/index.js'
+        main: './src/index.js',
+        // sub: './src/index.js'
     },
-    // devtool: "source-map",
+    devtool: "cheap-module-eval-source-map",
     devServer: {
         contentBase: './build',
         open: true,
@@ -44,14 +44,14 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-        template: 'src/index.html'
+            template: 'src/index.html'
         }),
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
-    // optimization: {
-    //     usedExports: true
-    // },
+    optimization: {
+        usedExports: true
+    },
     output: {
         path: path.resolve(__dirname, 'build'),// 绝对路径+bundle文件夹
         filename: '[name].js'
