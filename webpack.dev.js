@@ -16,7 +16,7 @@ module.exports = {
         open: true,
         port: 1314,
         hot: true,
-        hotOnly: true // hmr失效时是否不刷新页面
+        // hotOnly: true // hmr失效时是否不刷新页面
     },
     module: {
         rules: [{
