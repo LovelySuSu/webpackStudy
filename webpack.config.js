@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
 module.exports = {
-    mode: "development",
+    mode: "production",
     // entry: "./src/index.js", // 路径相对于webpack.config.js
     // 等同于
     entry: {
@@ -49,9 +49,9 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
-    optimization: {
-        usedExports: true
-    },
+    // optimization: {
+    //     usedExports: true
+    // },
     output: {
         path: path.resolve(__dirname, 'build'),// 绝对路径+bundle文件夹
         filename: '[name].js'
