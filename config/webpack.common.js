@@ -50,8 +50,9 @@ module.exports = {
             // 代码分割时只对异步代码生效，同步 import lodash 不进行代码分割,都做分割配置成all,initial对同步代码做分割
             chunks: 'all',
             // 引入的模块大于30000个字节才做split
-            minSize: 0,
-            maxSize: 0,
+            minSize: 30000,
+            // lodash 1mb,这里限定了最大值，就会对lodash进行二次拆分
+            // maxSize: 50000,
             minChunks: 1,
             maxAsyncRequests: 5,
             maxInitialRequests: 3,
