@@ -49,6 +49,9 @@ module.exports = {
         new CleanWebpackPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
+    optimization: {
+        usedExports: true
+    },
     output: {
         path: path.resolve(__dirname, 'build'),// 绝对路径+bundle文件夹
         filename: '[name].js'

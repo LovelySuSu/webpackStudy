@@ -1,6 +1,7 @@
 {
   "name": "webpackstudy",
   "version": "1.0.0",
+  "sideEffects": false,
   "description": "",
   "main": "src/index.js",
   "scripts": {
