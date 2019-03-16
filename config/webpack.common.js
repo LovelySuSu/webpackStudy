@@ -47,9 +47,10 @@ module.exports = {
         // splitChunks: {},
         // 等价于
         splitChunks: {
-            // 代码分割时只对异步代码生效，同步 import lodash 不进行代码分割,都做分割配置成all
+            // 代码分割时只对异步代码生效，同步 import lodash 不进行代码分割,都做分割配置成all,initial对同步代码做分割
             chunks: 'all',
-            minSize: 30000,
+            // 引入的模块大于30000个字节才做split
+            minSize: 0,
             maxSize: 0,
             minChunks: 1,
             maxAsyncRequests: 5,
@@ -62,13 +63,14 @@ module.exports = {
                     priority: -10,
                     filename: "vendors.js"
                 },
-                // default: {
-                //     minChunks: 2,
-                //     priority: -20,
-                //     reuseExistingChunk: true
-                // }
+                default: {
+                    // minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true,
+                    filename: "common.js"
+                }
                 // vendors: false,
-                default: false
+                // default: false
             }
         }
     }

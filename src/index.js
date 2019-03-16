@@ -7,9 +7,11 @@
 // }
 // getComponent().then(element => document.body.appendChild(element))
 
-import _ from 'lodash'
+// import _ from 'lodash'
+//
+// var element = document.createElement('div')
+// element.innerHTML =_.join(['a','b','c'],'***')
+// document.body.appendChild(element)
 
-var element = document.createElement('div')
-element.innerHTML =_.join(['a','b','c'],'***')
-document.body.appendChild(element)
-
+import a from './a'
+console.log(a.num)
