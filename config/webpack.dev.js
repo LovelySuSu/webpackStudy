@@ -11,6 +11,18 @@ const devConfig = {
         hot: true,
         // hotOnly: true // hmr失效时是否不刷新页面
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader'
+                ]
+            }
+        ]
+    },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ],
