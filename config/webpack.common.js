@@ -34,8 +34,6 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, '../build'),// 绝对路径+bundle文件夹
-        filename: '[name].js',
-        chunkFilename: "[name].chunk.js"
     },
     optimization: {
         usedExports: true,//tree shaking

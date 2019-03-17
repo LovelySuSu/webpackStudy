@@ -25,7 +25,11 @@ const prodConfig = {
             filename: '[name].css',
             chunkFilename: '[name].chunk.css'
         })
-    ]
+    ],
+    output: {
+        filename: '[name].[contenthash].js',
+        chunkFilename: "[name].[contenthash].chunk.js"
+    },
 
 }
 
