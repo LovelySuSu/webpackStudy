@@ -40,7 +40,8 @@ module.exports = {
     optimization: {
         usedExports: true,//tree shaking
         splitChunks: {
-            chunks: "all"
+            chunks: "all",
         }
     },
+    performance: false // 关闭性能警告
 }
