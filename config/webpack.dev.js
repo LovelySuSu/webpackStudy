@@ -25,10 +25,7 @@ const devConfig = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
-    ],
-    optimization: {
-        usedExports: true
-    }
+    ]
 }
 
 module.exports = merge(commonConfig,devConfig)

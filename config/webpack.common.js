@@ -38,8 +38,9 @@ module.exports = {
         chunkFilename: "[name].chunk.js"
     },
     optimization: {
+        usedExports: true,//tree shaking
         splitChunks: {
             chunks: "all"
-        },
-    }
+        }
+    },
 }

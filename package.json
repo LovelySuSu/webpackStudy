@@ -1,7 +1,9 @@
 {
   "name": "webpackstudy",
   "version": "1.0.0",
-  "sideEffects": false,
+  "sideEffects": [
+    "*.css"
+  ],
   "description": "",
   "main": "src/index.js",
   "scripts": {
