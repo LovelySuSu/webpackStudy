@@ -5,6 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
     entry: {
         main: './src/index.js',
+        other: './src/other.js'
     },
     module: {
         rules: [{
@@ -54,7 +55,7 @@ module.exports = {
             // lodash 1mb,这里限定了最大值，就会对lodash进行二次拆分
             // maxSize: 50000,
             // 一个代码被引入至少多少次后才对其进行代码分割
-            minChunks: 1,
+            minChunks: 2,
             // 同时加载的模块数最多5个，超过5个不做代码分割
             maxAsyncRequests: 5,
             // 入口文件引入的文件最多三个代码分割
