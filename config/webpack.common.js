@@ -43,12 +43,12 @@ module.exports = {
                 vendors: {
                     test: /[\\/]node_modules[\\/]/,
                     priority: -10,
-                    filename: "vendors.js"
+                    name: "vendors"
                 },
                 default: {
                     priority: -20,
                     reuseExistingChunk: true,
-                    filename: "common.js"
+                    name: "common"
                 },
             }
 
