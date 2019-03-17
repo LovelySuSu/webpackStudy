@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssssetsebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const prodConfig = {
     mode: "production",
-    devtool: "cheap-module-source-map",
+    devtool: "none",
     module: {
         rules: [
             {

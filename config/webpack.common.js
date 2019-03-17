@@ -41,6 +41,19 @@ module.exports = {
         usedExports: true,//tree shaking
         splitChunks: {
             chunks: "all",
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10,
+                    filename: "vendors.js"
+                },
+                default: {
+                    priority: -20,
+                    reuseExistingChunk: true,
+                    filename: "common.js"
+                },
+            }
+
         }
     },
     performance: false // 关闭性能警告
