@@ -2,15 +2,24 @@
   "errors": [],
   "warnings": [],
   "version": "4.29.6",
-  "hash": "dfcfda7bc93185b43c55",
-  "time": 630,
-  "builtAt": 1552795871143,
+  "hash": "c2697eac927bc7dbc5b6",
+  "time": 971,
+  "builtAt": 1552796234798,
   "publicPath": "",
   "outputPath": "/Users/xudinghanyang/Documents/study/code/webpackStudy/build",
   "assetsByChunkName": {
     "main": "main.js"
   },
   "assets": [
+    {
+      "name": "0.js",
+      "size": 1279,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [],
+      "emitted": true
+    },
     {
       "name": "index.html",
       "size": 200,
@@ -20,7 +29,7 @@
     },
     {
       "name": "main.js",
-      "size": 30083,
+      "size": 35009,
       "chunks": [
         "main"
       ],
@@ -57,21 +66,110 @@
   },
   "chunks": [
     {
+      "id": 0,
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 174,
+      "names": [],
+      "files": [
+        "0.js"
+      ],
+      "hash": "cb1f1b204ddad7eb01ec",
+      "siblings": [],
+      "parents": [
+        "main"
+      ],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": "./src/handleClick.js",
+          "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/handleClick.js",
+          "name": "./src/handleClick.js",
+          "index": 1,
+          "index2": 1,
+          "size": 174,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+          "issuerId": "./src/index.js",
+          "issuerName": "./src/index.js",
+          "issuerPath": [
+            {
+              "id": "./src/index.js",
+              "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+              "name": "./src/index.js",
+              "profile": {
+                "factory": 89,
+                "building": 636
+              }
+            }
+          ],
+          "profile": {
+            "factory": 46,
+            "building": 12
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/index.js",
+              "moduleIdentifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "import()",
+              "userRequest": "./handleClick.js",
+              "loc": "2:2-28"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "function handleClick() {\n  var element = document.createElement('div');\n  element.innerHTML = 'dingding';\n  document.body.appendChild(element);\n}\n\nexport default handleClick;"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": "./src/index.js",
+          "module": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+          "moduleIdentifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+          "moduleName": "./src/index.js",
+          "loc": "2:2-28",
+          "request": "./handleClick.js",
+          "reasons": []
+        }
+      ]
+    },
+    {
       "id": "main",
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 165,
+      "size": 309,
       "names": [
         "main"
       ],
       "files": [
         "main.js"
       ],
-      "hash": "f3845cf540e26f50c0c4",
+      "hash": "86394776094c1a522d2d",
       "siblings": [],
       "parents": [],
-      "children": [],
+      "children": [
+        0
+      ],
       "childrenByOrder": {},
       "modules": [
         {
@@ -80,7 +178,7 @@
           "name": "./src/index.js",
           "index": 0,
           "index2": 0,
-          "size": 165,
+          "size": 309,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -93,8 +191,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 50,
-            "building": 190
+            "factory": 89,
+            "building": 636
           },
           "failed": false,
           "errors": 0,
@@ -115,7 +213,7 @@
           "providedExports": null,
           "optimizationBailout": [],
           "depth": 0,
-          "source": "document.addEventListener('click', () => {\n  var element = document.createElement('div');\n  element.innerHTML = 'dingding';\n  document.body.appendChild(element);\n});"
+          "source": "document.addEventListener('click', () => {\n  import('./handleClick.js').then(({\n    default: func\n  }) => {\n    func();\n  });\n}); // document.addEventListener('click',() =>{\n//     var element = document.createElement('div')\n//     element.innerHTML ='dingding'\n//     document.body.appendChild(element)\n// })"
         }
       ],
       "filteredModules": 0,
@@ -133,12 +231,67 @@
   ],
   "modules": [
     {
+      "id": "./src/handleClick.js",
+      "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/handleClick.js",
+      "name": "./src/handleClick.js",
+      "index": 1,
+      "index2": 1,
+      "size": 174,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+      "issuerId": "./src/index.js",
+      "issuerName": "./src/index.js",
+      "issuerPath": [
+        {
+          "id": "./src/index.js",
+          "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+          "name": "./src/index.js",
+          "profile": {
+            "factory": 89,
+            "building": 636
+          }
+        }
+      ],
+      "profile": {
+        "factory": 46,
+        "building": 12
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/index.js",
+          "moduleIdentifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "import()",
+          "userRequest": "./handleClick.js",
+          "loc": "2:2-28"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "function handleClick() {\n  var element = document.createElement('div');\n  element.innerHTML = 'dingding';\n  document.body.appendChild(element);\n}\n\nexport default handleClick;"
+    },
+    {
       "id": "./src/index.js",
       "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
       "name": "./src/index.js",
       "index": 0,
       "index2": 0,
-      "size": 165,
+      "size": 309,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -151,8 +304,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 50,
-        "building": 190
+        "factory": 89,
+        "building": 636
       },
       "failed": false,
       "errors": 0,
@@ -173,7 +326,7 @@
       "providedExports": null,
       "optimizationBailout": [],
       "depth": 0,
-      "source": "document.addEventListener('click', () => {\n  var element = document.createElement('div');\n  element.innerHTML = 'dingding';\n  document.body.appendChild(element);\n});"
+      "source": "document.addEventListener('click', () => {\n  import('./handleClick.js').then(({\n    default: func\n  }) => {\n    func();\n  });\n}); // document.addEventListener('click',() =>{\n//     var element = document.createElement('div')\n//     element.innerHTML ='dingding'\n//     document.body.appendChild(element)\n// })"
     }
   ],
   "filteredModules": 0,
@@ -256,8 +409,8 @@
               "issuerName": null,
               "issuerPath": null,
               "profile": {
-                "factory": 33,
-                "building": 19
+                "factory": 72,
+                "building": 26
               },
               "failed": false,
               "errors": 0,
@@ -302,14 +455,14 @@
                   "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 33,
-                    "building": 19
+                    "factory": 72,
+                    "building": 26
                   }
                 }
               ],
               "profile": {
                 "factory": 3,
-                "building": 400
+                "building": 310
               },
               "failed": false,
               "errors": 0,
@@ -355,8 +508,8 @@
                   "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 33,
-                    "building": 19
+                    "factory": 72,
+                    "building": 26
                   }
                 },
                 {
@@ -365,13 +518,13 @@
                   "name": "./node_modules/lodash/lodash.js",
                   "profile": {
                     "factory": 3,
-                    "building": 400
+                    "building": 310
                   }
                 }
               ],
               "profile": {
-                "factory": 2,
-                "building": 2
+                "factory": 376,
+                "building": 11
               },
               "failed": false,
               "errors": 0,
@@ -417,8 +570,8 @@
                   "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 33,
-                    "building": 19
+                    "factory": 72,
+                    "building": 26
                   }
                 },
                 {
@@ -427,13 +580,13 @@
                   "name": "./node_modules/lodash/lodash.js",
                   "profile": {
                     "factory": 3,
-                    "building": 400
+                    "building": 310
                   }
                 }
               ],
               "profile": {
-                "factory": 2,
-                "building": 2
+                "factory": 376,
+                "building": 11
               },
               "failed": false,
               "errors": 0,
@@ -490,8 +643,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 33,
-            "building": 19
+            "factory": 72,
+            "building": 26
           },
           "failed": false,
           "errors": 0,
@@ -536,14 +689,14 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 33,
-                "building": 19
+                "factory": 72,
+                "building": 26
               }
             }
           ],
           "profile": {
             "factory": 3,
-            "building": 400
+            "building": 310
           },
           "failed": false,
           "errors": 0,
@@ -589,8 +742,8 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 33,
-                "building": 19
+                "factory": 72,
+                "building": 26
               }
             },
             {
@@ -599,13 +752,13 @@
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
                 "factory": 3,
-                "building": 400
+                "building": 310
               }
             }
           ],
           "profile": {
-            "factory": 2,
-            "building": 2
+            "factory": 376,
+            "building": 11
           },
           "failed": false,
           "errors": 0,
@@ -651,8 +804,8 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 33,
-                "building": 19
+                "factory": 72,
+                "building": 26
               }
             },
             {
@@ -661,13 +814,13 @@
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
                 "factory": 3,
-                "building": 400
+                "building": 310
               }
             }
           ],
           "profile": {
-            "factory": 2,
-            "building": 2
+            "factory": 376,
+            "building": 11
           },
           "failed": false,
           "errors": 0,
