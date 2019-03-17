@@ -4,8 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
     entry: {
-        main: './src/index.js',
-        other: './src/other.js'
+        main: './src/index.js'
     },
     module: {
         rules: [{
@@ -45,42 +44,8 @@ module.exports = {
         filename: '[name].js'
     },
     optimization: {
-        // splitChunks: {},
-        // 等价于
         splitChunks: {
-            // 代码分割时只对异步代码生效，同步 import lodash 不进行代码分割,都做分割配置成all,initial对同步代码做分割
-            chunks: 'all',
-            // 引入的模块大于30000个字节才做split
-            minSize: 30000,
-            // lodash 1mb,这里限定了最大值，就会对lodash进行二次拆分
-            // maxSize: 50000,
-            // 一个代码被引入至少多少次后才对其进行代码分割
-            minChunks: 2,
-            // 同时加载的模块数最多5个，超过5个不做代码分割
-            maxAsyncRequests: 5,
-            // 入口文件引入的文件最多三个代码分割
-            maxInitialRequests: 3,
-            // 生成文件名称连接符
-            automaticNameDelimiter: '~',
-            // cacheGroups 里 filename 有效
-            name: true,
-            cacheGroups: {
-                vendors: {
-                    test: /[\\/]node_modules[\\/]/,
-                    priority: -10,
-                    // filename: "vendors.js"
-                },
-                default: {
-                    // minChunks: 2,
-                    // 优先级低于-10，所以node_modules里面用vendors
-                    priority: -20,
-                    // 一个模块已经被引用过，就直接复用，不用再打包
-                    reuseExistingChunk: true,
-                    filename: "common.js"
-                },
-                // vendors: false,
-                // default: false
-            }
-        }
+            chunks: "all"
+        },
     }
 }
