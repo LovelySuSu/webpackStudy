@@ -1,4 +1,4 @@
-import _ from 'lodash'
+// import _ from 'lodash'
 // import $ from 'jquery'
 import { ui } from './jquery.ui'
 
