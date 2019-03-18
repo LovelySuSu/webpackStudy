@@ -2,26 +2,27 @@
   "errors": [],
   "warnings": [],
   "version": "4.29.6",
-  "hash": "3e4f093300d22e16cf47",
-  "time": 917,
-  "builtAt": 1552804354452,
+  "hash": "d5984d7c678186d1cea4",
+  "time": 1378,
+  "builtAt": 1552924805588,
   "publicPath": "",
   "outputPath": "/Users/xudinghanyang/Documents/study/code/webpackStudy/build",
   "assetsByChunkName": {
-    "main": "main.js",
-    "vendors~main": "vendors~main.chunk.js"
+    "main": "main.chunk.js",
+    "runtime": "runtime.js",
+    "vendors": "vendors.chunk.js"
   },
   "assets": [
     {
       "name": "index.html",
-      "size": 268,
+      "size": 326,
       "chunks": [],
       "chunkNames": [],
       "emitted": true
     },
     {
-      "name": "main.js",
-      "size": 33439,
+      "name": "main.chunk.js",
+      "size": 2953,
       "chunks": [
         "main"
       ],
@@ -31,13 +32,24 @@
       "emitted": true
     },
     {
-      "name": "vendors~main.chunk.js",
-      "size": 2207378,
+      "name": "runtime.js",
+      "size": 31660,
       "chunks": [
-        "vendors~main"
+        "runtime"
       ],
       "chunkNames": [
-        "vendors~main"
+        "runtime"
+      ],
+      "emitted": true
+    },
+    {
+      "name": "vendors.chunk.js",
+      "size": 2207373,
+      "chunks": [
+        "vendors"
+      ],
+      "chunkNames": [
+        "vendors"
       ],
       "emitted": true
     }
@@ -46,12 +58,14 @@
   "entrypoints": {
     "main": {
       "chunks": [
-        "vendors~main",
+        "runtime",
+        "vendors",
         "main"
       ],
       "assets": [
-        "vendors~main.chunk.js",
-        "main.js"
+        "runtime.js",
+        "vendors.chunk.js",
+        "main.chunk.js"
       ],
       "children": {},
       "childAssets": {}
@@ -60,12 +74,14 @@
   "namedChunkGroups": {
     "main": {
       "chunks": [
-        "vendors~main",
+        "runtime",
+        "vendors",
         "main"
       ],
       "assets": [
-        "vendors~main.chunk.js",
-        "main.js"
+        "runtime.js",
+        "vendors.chunk.js",
+        "main.chunk.js"
       ],
       "children": {},
       "childAssets": {}
@@ -76,17 +92,18 @@
       "id": "main",
       "rendered": true,
       "initial": true,
-      "entry": true,
-      "size": 129,
+      "entry": false,
+      "size": 239,
       "names": [
         "main"
       ],
       "files": [
-        "main.js"
+        "main.chunk.js"
       ],
-      "hash": "153db7de558ed0b86e30",
+      "hash": "3d7116872523b8d60c41",
       "siblings": [
-        "vendors~main"
+        "runtime",
+        "vendors"
       ],
       "parents": [],
       "children": [],
@@ -97,8 +114,8 @@
           "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
           "name": "./src/index.js",
           "index": 0,
-          "index2": 4,
-          "size": 129,
+          "index2": 5,
+          "size": 177,
           "cacheable": true,
           "built": true,
           "optional": false,
@@ -111,8 +128,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 49,
-            "building": 368
+            "factory": 73,
+            "building": 695
           },
           "failed": false,
           "errors": 0,
@@ -133,7 +150,73 @@
           "providedExports": [],
           "optimizationBailout": [],
           "depth": 0,
-          "source": "import _ from 'lodash';\nimport $ from 'jquery';\nconst dom = $('<div>');\ndom.html(_.join(['a', 'b', 'c']));\n$('body').append(dom);"
+          "source": "import _ from 'lodash';\nimport $ from 'jquery';\nimport { ui } from './jquery.ui';\nconst dom = $('<div>');\ndom.html(_.join(['a', 'b', 'c'], '--!-'));\nui();\n$('body').append(dom);"
+        },
+        {
+          "id": "./src/jquery.ui.js",
+          "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/jquery.ui.js",
+          "name": "./src/jquery.ui.js",
+          "index": 5,
+          "index2": 4,
+          "size": 62,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "main"
+          ],
+          "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+          "issuerId": "./src/index.js",
+          "issuerName": "./src/index.js",
+          "issuerPath": [
+            {
+              "id": "./src/index.js",
+              "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+              "name": "./src/index.js",
+              "profile": {
+                "factory": 73,
+                "building": 695
+              }
+            }
+          ],
+          "profile": {
+            "factory": 287,
+            "building": 137
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./src/index.js",
+              "moduleIdentifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "./jquery.ui",
+              "loc": "3:0-33"
+            },
+            {
+              "moduleId": "./src/index.js",
+              "moduleIdentifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "./jquery.ui",
+              "loc": "6:0-2"
+            }
+          ],
+          "usedExports": [
+            "ui"
+          ],
+          "providedExports": [
+            "ui"
+          ],
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "export function ui() {\n  $('body').css('background', 'red');\n}"
         }
       ],
       "filteredModules": 0,
@@ -149,21 +232,55 @@
       ]
     },
     {
-      "id": "vendors~main",
+      "id": "runtime",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 0,
+      "names": [
+        "runtime"
+      ],
+      "files": [
+        "runtime.js"
+      ],
+      "hash": "6431073e52f5880a1e7a",
+      "siblings": [
+        "main",
+        "vendors"
+      ],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "main",
+          "request": "./src/index.js",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "vendors",
       "rendered": true,
       "initial": true,
       "entry": false,
-      "reason": "split chunk (cache group: vendors) (name: vendors~main)",
+      "reason": "split chunk (cache group: vendors) (name: vendors)",
       "size": 812575,
       "names": [
-        "vendors~main"
+        "vendors"
       ],
       "files": [
-        "vendors~main.chunk.js"
+        "vendors.chunk.js"
       ],
-      "hash": "868831b496a649f3b292",
+      "hash": "aa76160f94bf0a175676",
       "siblings": [
-        "main"
+        "main",
+        "runtime"
       ],
       "parents": [],
       "children": [],
@@ -181,7 +298,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "vendors~main"
+            "vendors"
           ],
           "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
           "issuerId": "./src/index.js",
@@ -192,14 +309,14 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 49,
-                "building": 368
+                "factory": 73,
+                "building": 695
               }
             }
           ],
           "profile": {
-            "factory": 199,
-            "building": 112
+            "factory": 287,
+            "building": 137
           },
           "failed": false,
           "errors": 0,
@@ -222,7 +339,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "jquery",
-              "loc": "3:12-13"
+              "loc": "4:12-13"
             },
             {
               "moduleId": "./src/index.js",
@@ -231,7 +348,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "jquery",
-              "loc": "5:0-1"
+              "loc": "7:0-1"
             }
           ],
           "usedExports": [
@@ -254,7 +371,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "vendors~main"
+            "vendors"
           ],
           "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
           "issuerId": "./src/index.js",
@@ -265,14 +382,14 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 49,
-                "building": 368
+                "factory": 73,
+                "building": 695
               }
             }
           ],
           "profile": {
-            "factory": 199,
-            "building": 112
+            "factory": 287,
+            "building": 137
           },
           "failed": false,
           "errors": 0,
@@ -295,7 +412,7 @@
               "moduleName": "./src/index.js",
               "type": "harmony import specifier",
               "userRequest": "lodash",
-              "loc": "4:9-10"
+              "loc": "5:9-10"
             }
           ],
           "usedExports": [
@@ -318,7 +435,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "vendors~main"
+            "vendors"
           ],
           "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
           "issuerId": "./node_modules/lodash/lodash.js",
@@ -329,8 +446,8 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 49,
-                "building": 368
+                "factory": 73,
+                "building": 695
               }
             },
             {
@@ -338,14 +455,14 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
-                "factory": 199,
-                "building": 112
+                "factory": 287,
+                "building": 137
               }
             }
           ],
           "profile": {
             "factory": 0,
-            "building": 3
+            "building": 4
           },
           "failed": false,
           "errors": 0,
@@ -380,7 +497,7 @@
           "optional": false,
           "prefetched": false,
           "chunks": [
-            "vendors~main"
+            "vendors"
           ],
           "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
           "issuerId": "./node_modules/lodash/lodash.js",
@@ -391,8 +508,8 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
               "name": "./src/index.js",
               "profile": {
-                "factory": 49,
-                "building": 368
+                "factory": 73,
+                "building": 695
               }
             },
             {
@@ -400,14 +517,14 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
-                "factory": 199,
-                "building": 112
+                "factory": 287,
+                "building": 137
               }
             }
           ],
           "profile": {
             "factory": 0,
-            "building": 3
+            "building": 4
           },
           "failed": false,
           "errors": 0,
@@ -457,7 +574,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "vendors~main"
+        "vendors"
       ],
       "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
       "issuerId": "./src/index.js",
@@ -468,14 +585,14 @@
           "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 49,
-            "building": 368
+            "factory": 73,
+            "building": 695
           }
         }
       ],
       "profile": {
-        "factory": 199,
-        "building": 112
+        "factory": 287,
+        "building": 137
       },
       "failed": false,
       "errors": 0,
@@ -498,7 +615,7 @@
           "moduleName": "./src/index.js",
           "type": "harmony import specifier",
           "userRequest": "jquery",
-          "loc": "3:12-13"
+          "loc": "4:12-13"
         },
         {
           "moduleId": "./src/index.js",
@@ -507,7 +624,7 @@
           "moduleName": "./src/index.js",
           "type": "harmony import specifier",
           "userRequest": "jquery",
-          "loc": "5:0-1"
+          "loc": "7:0-1"
         }
       ],
       "usedExports": [
@@ -530,7 +647,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "vendors~main"
+        "vendors"
       ],
       "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
       "issuerId": "./src/index.js",
@@ -541,14 +658,14 @@
           "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 49,
-            "building": 368
+            "factory": 73,
+            "building": 695
           }
         }
       ],
       "profile": {
-        "factory": 199,
-        "building": 112
+        "factory": 287,
+        "building": 137
       },
       "failed": false,
       "errors": 0,
@@ -571,7 +688,7 @@
           "moduleName": "./src/index.js",
           "type": "harmony import specifier",
           "userRequest": "lodash",
-          "loc": "4:9-10"
+          "loc": "5:9-10"
         }
       ],
       "usedExports": [
@@ -594,7 +711,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "vendors~main"
+        "vendors"
       ],
       "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
       "issuerId": "./node_modules/lodash/lodash.js",
@@ -605,8 +722,8 @@
           "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 49,
-            "building": 368
+            "factory": 73,
+            "building": 695
           }
         },
         {
@@ -614,14 +731,14 @@
           "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
           "name": "./node_modules/lodash/lodash.js",
           "profile": {
-            "factory": 199,
-            "building": 112
+            "factory": 287,
+            "building": 137
           }
         }
       ],
       "profile": {
         "factory": 0,
-        "building": 3
+        "building": 4
       },
       "failed": false,
       "errors": 0,
@@ -656,7 +773,7 @@
       "optional": false,
       "prefetched": false,
       "chunks": [
-        "vendors~main"
+        "vendors"
       ],
       "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
       "issuerId": "./node_modules/lodash/lodash.js",
@@ -667,8 +784,8 @@
           "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
           "name": "./src/index.js",
           "profile": {
-            "factory": 49,
-            "building": 368
+            "factory": 73,
+            "building": 695
           }
         },
         {
@@ -676,14 +793,14 @@
           "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
           "name": "./node_modules/lodash/lodash.js",
           "profile": {
-            "factory": 199,
-            "building": 112
+            "factory": 287,
+            "building": 137
           }
         }
       ],
       "profile": {
         "factory": 0,
-        "building": 3
+        "building": 4
       },
       "failed": false,
       "errors": 0,
@@ -711,8 +828,8 @@
       "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
       "name": "./src/index.js",
       "index": 0,
-      "index2": 4,
-      "size": 129,
+      "index2": 5,
+      "size": 177,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -725,8 +842,8 @@
       "issuerName": null,
       "issuerPath": null,
       "profile": {
-        "factory": 49,
-        "building": 368
+        "factory": 73,
+        "building": 695
       },
       "failed": false,
       "errors": 0,
@@ -747,7 +864,73 @@
       "providedExports": [],
       "optimizationBailout": [],
       "depth": 0,
-      "source": "import _ from 'lodash';\nimport $ from 'jquery';\nconst dom = $('<div>');\ndom.html(_.join(['a', 'b', 'c']));\n$('body').append(dom);"
+      "source": "import _ from 'lodash';\nimport $ from 'jquery';\nimport { ui } from './jquery.ui';\nconst dom = $('<div>');\ndom.html(_.join(['a', 'b', 'c'], '--!-'));\nui();\n$('body').append(dom);"
+    },
+    {
+      "id": "./src/jquery.ui.js",
+      "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/jquery.ui.js",
+      "name": "./src/jquery.ui.js",
+      "index": 5,
+      "index2": 4,
+      "size": 62,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "main"
+      ],
+      "issuer": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+      "issuerId": "./src/index.js",
+      "issuerName": "./src/index.js",
+      "issuerPath": [
+        {
+          "id": "./src/index.js",
+          "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+          "name": "./src/index.js",
+          "profile": {
+            "factory": 73,
+            "building": 695
+          }
+        }
+      ],
+      "profile": {
+        "factory": 287,
+        "building": 137
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./src/index.js",
+          "moduleIdentifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "./jquery.ui",
+          "loc": "3:0-33"
+        },
+        {
+          "moduleId": "./src/index.js",
+          "moduleIdentifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/babel-loader/lib/index.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "./jquery.ui",
+          "loc": "6:0-2"
+        }
+      ],
+      "usedExports": [
+        "ui"
+      ],
+      "providedExports": [
+        "ui"
+      ],
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "export function ui() {\n  $('body').css('background', 'red');\n}"
     }
   ],
   "filteredModules": 0,
@@ -830,8 +1013,8 @@
               "issuerName": null,
               "issuerPath": null,
               "profile": {
-                "factory": 31,
-                "building": 20
+                "factory": 48,
+                "building": 26
               },
               "failed": false,
               "errors": 0,
@@ -876,14 +1059,14 @@
                   "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 31,
-                    "building": 20
+                    "factory": 48,
+                    "building": 26
                   }
                 }
               ],
               "profile": {
-                "factory": 3,
-                "building": 209
+                "factory": 5,
+                "building": 274
               },
               "failed": false,
               "errors": 0,
@@ -929,8 +1112,8 @@
                   "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 31,
-                    "building": 20
+                    "factory": 48,
+                    "building": 26
                   }
                 },
                 {
@@ -938,14 +1121,14 @@
                   "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
                   "name": "./node_modules/lodash/lodash.js",
                   "profile": {
-                    "factory": 3,
-                    "building": 209
+                    "factory": 5,
+                    "building": 274
                   }
                 }
               ],
               "profile": {
-                "factory": 189,
-                "building": 105
+                "factory": 459,
+                "building": 146
               },
               "failed": false,
               "errors": 0,
@@ -991,8 +1174,8 @@
                   "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
                   "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
                   "profile": {
-                    "factory": 31,
-                    "building": 20
+                    "factory": 48,
+                    "building": 26
                   }
                 },
                 {
@@ -1000,14 +1183,14 @@
                   "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
                   "name": "./node_modules/lodash/lodash.js",
                   "profile": {
-                    "factory": 3,
-                    "building": 209
+                    "factory": 5,
+                    "building": 274
                   }
                 }
               ],
               "profile": {
-                "factory": 189,
-                "building": 105
+                "factory": 459,
+                "building": 146
               },
               "failed": false,
               "errors": 0,
@@ -1064,8 +1247,8 @@
           "issuerName": null,
           "issuerPath": null,
           "profile": {
-            "factory": 31,
-            "building": 20
+            "factory": 48,
+            "building": 26
           },
           "failed": false,
           "errors": 0,
@@ -1110,14 +1293,14 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 31,
-                "building": 20
+                "factory": 48,
+                "building": 26
               }
             }
           ],
           "profile": {
-            "factory": 3,
-            "building": 209
+            "factory": 5,
+            "building": 274
           },
           "failed": false,
           "errors": 0,
@@ -1163,8 +1346,8 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 31,
-                "building": 20
+                "factory": 48,
+                "building": 26
               }
             },
             {
@@ -1172,14 +1355,14 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
-                "factory": 3,
-                "building": 209
+                "factory": 5,
+                "building": 274
               }
             }
           ],
           "profile": {
-            "factory": 189,
-            "building": 105
+            "factory": 459,
+            "building": 146
           },
           "failed": false,
           "errors": 0,
@@ -1225,8 +1408,8 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/html-webpack-plugin/lib/loader.js!/Users/xudinghanyang/Documents/study/code/webpackStudy/src/index.html",
               "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
               "profile": {
-                "factory": 31,
-                "building": 20
+                "factory": 48,
+                "building": 26
               }
             },
             {
@@ -1234,14 +1417,14 @@
               "identifier": "/Users/xudinghanyang/Documents/study/code/webpackStudy/node_modules/lodash/lodash.js",
               "name": "./node_modules/lodash/lodash.js",
               "profile": {
-                "factory": 3,
-                "building": 209
+                "factory": 5,
+                "building": 274
               }
             }
           ],
           "profile": {
-            "factory": 189,
-            "building": 105
+            "factory": 459,
+            "building": 146
           },
           "failed": false,
           "errors": 0,

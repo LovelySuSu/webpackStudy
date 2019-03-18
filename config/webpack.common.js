@@ -36,6 +36,9 @@ module.exports = {
         path: path.resolve(__dirname, '../build'),// 绝对路径+bundle文件夹
     },
     optimization: {
+        runtimeChunk: {
+          name: 'runtime' // 老版本webpack 打包可能没修改但contenthash发生了变化
+        },
         usedExports: true,//tree shaking
         splitChunks: {
             chunks: "all",
