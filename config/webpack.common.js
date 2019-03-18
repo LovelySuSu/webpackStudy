@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
     entry: {
@@ -31,6 +32,10 @@ module.exports = {
             // 向上一层为根路径
             root: path.resolve(__dirname, '../')
         }),
+        new webpack.ProvidePlugin({
+            // 模块中使用了$就自动引入jquery，并将jquery赋值给$
+            $: 'jquery'
+        })
     ],
     output: {
         path: path.resolve(__dirname, '../build'),// 绝对路径+bundle文件夹
