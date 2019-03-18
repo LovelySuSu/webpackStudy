@@ -74,8 +74,8 @@ const commonConfig = {
     performance: false // 关闭性能警告
 }
 
-module.exports = (production) => {
-    if(production) {
+module.exports = (env) => {
+    if(env && env.production === 'abc') {
         return merge(commonConfig,prodConfig)
     } else return merge(commonConfig,devConfig)
 }
