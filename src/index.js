@@ -4,6 +4,6 @@ import { ui } from './jquery.ui'
 
 ui()
 const dom = $('<div>')
-dom.html(_.join(['a','b','c'],'--!-'))
+dom.html(_join(['a','b','c'],'--!-'))
 
 $('body').append(dom)

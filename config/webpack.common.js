@@ -35,7 +35,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             // 模块中使用了$就自动引入jquery，并将jquery赋值给$
             $: 'jquery',
-            _: 'lodash'
+            _join: ['lodash','join']
         })
     ],
     output: {
