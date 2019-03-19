@@ -5,10 +5,7 @@ module.exports = {
     entry: './src/index.js',
     // externals: ['lodash'],
     externals: {
-        lodash: {
-            root: '_',
-            commonjs: 'lodash' //库在commonjs环境被使用，lodash被引用时必须叫lodash
-        }
+        lodash: 'lodash'
     },
     output: {
         path: path.resolve(__dirname,'dist'),
