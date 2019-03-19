@@ -3,7 +3,13 @@ const path = require('path')
 module.exports = {
     mode: 'production',
     entry: './src/index.js',
-    externals: ['lodash'],
+    // externals: ['lodash'],
+    externals: {
+        lodash: {
+            root: '_',
+            commonjs: 'lodash' //库在commonjs环境被使用，lodash被引用时必须叫lodash
+        }
+    },
     output: {
         path: path.resolve(__dirname,'dist'),
         filename: 'library.js',
