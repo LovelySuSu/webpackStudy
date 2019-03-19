@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/index.js',
     // externals: ['lodash'],
     externals: {
-        lodash: 'lodash'
+        lodash: 'lodash'//起名叫做lodash
     },
     output: {
         path: path.resolve(__dirname,'dist'),
