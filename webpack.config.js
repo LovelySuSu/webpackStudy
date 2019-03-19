@@ -6,7 +6,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname,'dist'),
         filename: 'library.js',
-        library: 'library',
+        // library: 'library',
         libraryTarget: "umd" //通用引入方式
     }
 
