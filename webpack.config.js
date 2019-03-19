@@ -8,8 +8,8 @@ module.exports = {
         filename: 'library.js',
         // 在全局变量里增加library变量
         library: 'library',
-        // 全局变量挂在哪里
-        libraryTarget: "umd" //通用引入方式
+        // 不支持commonjs、amd的引入方式，全局变量挂载到this上
+        libraryTarget: "this" //通用引入方式
     }
 
 }
