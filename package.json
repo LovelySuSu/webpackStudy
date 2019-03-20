@@ -7,7 +7,6 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev": "webpack --config ./config/webpack.common.js",
     "start": "webpack-dev-server --config ./config/webpack.common.js",
     "build": "webpack --env.production=abc --config ./config/webpack.common.js"
   },

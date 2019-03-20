@@ -1,7 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const webpack = require('webpack')
 const merge = require('webpack-merge')
 const devConfig = require('./webpack.dev')
 const prodConfig = require('./webpack.prod')
@@ -27,8 +26,6 @@ const commonConfig = {
             exclude: /node_modules/,
             use: [{
                 loader: "babel-loader"
-            },{
-                loader: "imports-loader?this=>window"
             }],
         }]
     },
@@ -39,11 +36,6 @@ const commonConfig = {
         new CleanWebpackPlugin({
             // 向上一层为根路径
             root: path.resolve(__dirname, '../')
-        }),
-        new webpack.ProvidePlugin({
-            // 模块中使用了$就自动引入jquery，并将jquery赋值给$
-            $: 'jquery',
-            _join: ['lodash','join']
         })
     ],
     output: {
