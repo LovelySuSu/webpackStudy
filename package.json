@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/lodash": "^4.14.123",
+    "lodash": "^4.17.11",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   },
