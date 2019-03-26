@@ -20,6 +20,7 @@ module.exports = {
         proxy: {
             '/react/api': {
                 target: 'http://www.dell-lee.com',
+                secure: false, // 请求https的网址
                 pathRewrite: {
                     'header.json': 'demo.json' // 请求header.json改为去请求demo.json
                 }
