@@ -18,7 +18,12 @@ module.exports = {
         hot: true,
         hotOnly: true, // hmr失效时是否不刷新页面
         proxy: {
-            '/react/api': 'http://www.dell-lee.com'
+            '/react/api': {
+                target: 'http://www.dell-lee.com',
+                pathRewrite: {
+                    'header.json': 'demo.json' // 请求header.json改为去请求demo.json
+                }
+            }
         }
     },
     module: {
