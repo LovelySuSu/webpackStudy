@@ -18,7 +18,15 @@ module.exports = {
         hot: true,
         hotOnly: true, // hmr失效时是否不刷新页面
         proxy: {
-            changeOrigin: true
+            '/react/api': {
+                target: 'http://www.dell-lee.com',
+                secure: false, // 请求https的网址
+                changeOrigin: true,
+                header: {
+                    host: 'www.dell-lee.com',
+                    cookie: 'xxxxxxx'
+                }
+            }
 
         }
     },
