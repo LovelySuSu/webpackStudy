@@ -18,8 +18,7 @@ module.exports = {
         hot: true,
         hotOnly: true, // hmr失效时是否不刷新页面
         proxy: {
-            index: '',
-            '/': 'localhost:3000'
+            changeOrigin: true
 
         }
     },
