@@ -21,6 +21,13 @@ module.exports = {
             '/react/api': {
                 target: 'http://www.dell-lee.com',
                 secure: false, // 请求https的网址
+                bypass: function(req,res,proxyOptions) {
+                    // 请求html文件，跳过代理，返回当前目录下index.html
+                    if(req.headers.accept.indexOf('html')!== -1) {
+                        console.log('skipping proxy for browser request')
+                        return './index.html'
+                    }
+                },
                 pathRewrite: {
                     'header.json': 'demo.json' // 请求header.json改为去请求demo.json
                 }
