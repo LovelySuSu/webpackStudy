@@ -18,8 +18,8 @@ module.exports = {
         hot: true,
         hotOnly: true, // hmr失效时是否不刷新页面
         proxy: {
-            context: ['/react/api','/react/fetch'],
-            target: 'http://www.dell-lee.com',
+            index: '',
+            '/': 'localhost:3000'
 
         }
     },
