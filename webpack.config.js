@@ -17,6 +17,7 @@ module.exports = {
         port: 1314,
         hot: true,
         hotOnly: true, // hmr失效时是否不刷新页面
+        historyApiFallback: true,
         proxy: {
             '/react/api': {
                 target: 'http://www.dell-lee.com',
