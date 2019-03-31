@@ -18,6 +18,13 @@ module.exports = {
         hot: true,
         hotOnly: true, // hmr失效时是否不刷新页面
         historyApiFallback: true,
+        // 配置参数
+        // historyApiFallback: {
+        //     rewrites: [{
+        //         from: '/abc.html',
+        //         to: '/index.html'
+        //     }]
+        // },
         proxy: {
             '/react/api': {
                 target: 'http://www.dell-lee.com',
