@@ -13,6 +13,7 @@ module.exports = {
   },
   // devtool: "source-map",
   devServer: {
+    overlay: true,
     contentBase: './build',
     open: true,
     port: 1314,
@@ -58,9 +59,9 @@ module.exports = {
         'postcss-loader',
       ],
     }, {
-      test: /\.(js|jsx)$/,
+      test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel-loader',
+      use: ['babel-loader','eslint-loader']
     }],
   },
   plugins: [
