@@ -1,14 +1,15 @@
-const express = require('express')
-const webpack = require('webpack')
-const webpackDevMiddleware = require('webpack-dev-middleware')
-const config = require('./webpack.config')
-const compiler = webpack(config) // webpack编译器
+const express = require('express');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const config = require('./webpack.config');
 
-const app = express()
-app.use(webpackDevMiddleware(compiler,{
-    publicPath: config.output.publicPath
-}))
+const compiler = webpack(config); // webpack编译器
 
-app.listen(1314,()=>{
-    console.log('server is running')
-})
+const app = express();
+app.use(webpackDevMiddleware(compiler, {
+  publicPath: config.output.publicPath,
+}));
+
+app.listen(1314, () => {
+  console.log('server is running');
+});
