@@ -14,12 +14,12 @@ const plugins = [
 ]
 const files = fs.readdirSync(path.resolve(__dirname,'./dll/'))
 files.forEach(file => {
-    if(/.*\.dll.js/) {
+    if(/.*\.dll.js/.test(file)) {
         plugins.push(new AddAssetsHtmlPlugin({
                 filepath: path.resolve(__dirname, `dll/${file}`)
             }))
     }
-    if(/.*\.manifest.json/) {
+    if(/.*\.manifest.json/.test(file)) {
         new webpack.DllReferencePlugin({
             manifest:path.resolve(__dirname,'dll',file)
         })
