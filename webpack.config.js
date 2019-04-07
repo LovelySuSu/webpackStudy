@@ -5,42 +5,45 @@ const AddAssetsHtmlPlugin = require('add-asset-html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
 
-const plugins = [
-    new HtmlWebpackPlugin({
-        template: 'src/index.html',
-        filename: 'index.html',
-        chunks: ['vendors','main']
-    }),
-    new HtmlWebpackPlugin({
-        template: 'src/index.html',
-        filename: 'list.html',
-        chunks: ['vendors','list']
-    }),
-    new CleanWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin()
-]
-const files = fs.readdirSync(path.resolve(__dirname,'./dll/'))
-files.forEach(file => {
-    if(/.*\.dll.js/.test(file)) {
-        plugins.push(new AddAssetsHtmlPlugin({
+const makePlugins = (configs) => {
+    const plugins = [
+        new CleanWebpackPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+    ]
+
+    Object.keys(configs.entry).forEach((item) => {
+        plugins.push(new HtmlWebpackPlugin({
+            template: 'src/index.html',
+            filename: `${item}.html`,
+            chunks: ['vendors',`${item}`]
+        }))
+    })
+
+    const files = fs.readdirSync(path.resolve(__dirname,'./dll/'))
+    files.forEach(file => {
+        if(/.*\.dll.js/.test(file)) {
+            plugins.push(new AddAssetsHtmlPlugin({
                 filepath: path.resolve(__dirname, `dll/${file}`)
             }))
-    }
-    if(/.*\.manifest.json/.test(file)) {
-        new webpack.DllReferencePlugin({
-            manifest:path.resolve(__dirname,'dll',file)
-        })
-    }
+        }
+        if(/.*\.manifest.json/.test(file)) {
+            new webpack.DllReferencePlugin({
+                manifest:path.resolve(__dirname,'dll',file)
+            })
+        }
 
-})
-module.exports = {
+    })
+    return plugins
+}
+
+const configs = {
     mode: "development",
     // entry: "./src/index.js", // 路径相对于webpack.config.js
     // 等同于
     entry: {
-            main: './src/index.js',
-            list: './src/list.js'
-            // sub: './src/index.js'
+        main: './src/index.js',
+        list: './src/list.js'
+        // sub: './src/index.js'
     },
     resolve: {
         extensions: ['.js','.jsx'],
@@ -81,9 +84,10 @@ module.exports = {
             loader: 'babel-loader',
         }]
     },
-    plugins: plugins,
     output: {
         path: path.resolve(__dirname, 'build'),// 绝对路径+bundle文件夹
         filename: '[name].js'
     }
 }
+configs.plugins = makePlugins(configs)
+module.exports = configs
