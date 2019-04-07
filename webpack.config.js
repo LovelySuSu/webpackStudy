@@ -11,7 +11,8 @@ module.exports = {
             // sub: './src/index.js'
     },
     resolve: {
-        extensions: ['.js','.jsx']
+        extensions: ['.js','.jsx'],
+        mainFiles: ['index','Child']
     },
     // devtool: "source-map",
     devServer: {
