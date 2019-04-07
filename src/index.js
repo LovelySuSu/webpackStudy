@@ -1,7 +1,7 @@
 import "@babel/polyfill"
 import React,{ Component } from 'react'
 import ReactDom from 'react-dom'
-import Child from "./child/Child"
+import Child from "./child/Child.jsx"
 class App extends Component {
     render() {
         return <div>
