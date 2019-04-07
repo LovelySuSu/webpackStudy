@@ -1,8 +1,31 @@
 const path = require('path')
+const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const AddAssetsHtmlPlugin = require('add-asset-html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
+
+const plugins = [
+    new HtmlWebpackPlugin({
+        template: 'src/index.html'
+    }),
+    new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin()
+]
+const files = fs.readdirSync(path.resolve(__dirname,'./dll/'))
+files.forEach(file => {
+    if(/.*\.dll.js/) {
+        plugins.push(new AddAssetsHtmlPlugin({
+                filepath: path.resolve(__dirname, `dll/${file}`)
+            }))
+    }
+    if(/.*\.manifest.json/) {
+        new webpack.DllReferencePlugin({
+            manifest:path.resolve(__dirname,'dll',file)
+        })
+    }
+
+})
 module.exports = {
     mode: "development",
     // entry: "./src/index.js", // 路径相对于webpack.config.js
@@ -50,25 +73,7 @@ module.exports = {
             loader: 'babel-loader',
         }]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-        template: 'src/index.html'
-        }),
-        new CleanWebpackPlugin(),
-        new AddAssetsHtmlPlugin({
-            filepath: path.resolve(__dirname,'dll/vendors.dll.js')
-        }),
-        new AddAssetsHtmlPlugin({
-            filepath: path.resolve(__dirname,'dll/react.dll.js')
-        }),
-        new webpack.DllReferencePlugin({
-            manifest:path.resolve(__dirname,'dll/vendors.manifest.json')
-        }),
-        new webpack.DllReferencePlugin({
-            manifest:path.resolve(__dirname,'dll/react.manifest.json')
-        }),
-        new webpack.HotModuleReplacementPlugin()
-    ],
+    plugins: plugins,
     output: {
         path: path.resolve(__dirname, 'build'),// 绝对路径+bundle文件夹
         filename: '[name].js'
