@@ -10,6 +10,9 @@ module.exports = {
             main: './src/index.js',
             // sub: './src/index.js'
     },
+    resolve: {
+        extensions: ['.js','.jsx']
+    },
     // devtool: "source-map",
     devServer: {
         contentBase: './build',
