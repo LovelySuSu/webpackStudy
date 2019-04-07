@@ -58,6 +58,9 @@ module.exports = {
         new AddAssetsHtmlPlugin({
             filepath: path.resolve(__dirname,'dll/vendors.dll.js')
         }),
+        new webpack.DllReferencePlugin({
+            manifest:path.resolve(__dirname,'dll/vendors.manifest.json')
+        }),
         new webpack.HotModuleReplacementPlugin()
     ],
     output: {
