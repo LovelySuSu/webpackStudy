@@ -12,7 +12,10 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js','.jsx'],
-        mainFiles: ['index','Child']
+        // mainFiles: ['index','Index'] // 对打包性能有影响
+        alias:{
+            dingding: path.resolve(__dirname,'./src/child')
+        }
     },
     // devtool: "source-map",
     devServer: {
