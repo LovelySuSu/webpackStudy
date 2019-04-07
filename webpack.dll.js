@@ -2,7 +2,8 @@ const path = require('path')
 const webpack = require('webpack')
 module.exports = {
     entry: {
-        vendors: ['react','react-dom','lodash']
+        vendors: ['lodash'],
+        react: ['react','react-dom']
     },
     output: {
         path: path.resolve(__dirname, 'dll'),
