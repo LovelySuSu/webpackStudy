@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const AddAssetsHtmlPlugin = require('add-asset-html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
 module.exports = {
@@ -13,9 +14,9 @@ module.exports = {
     resolve: {
         extensions: ['.js','.jsx'],
         // mainFiles: ['index','Index'] // 对打包性能有影响
-        alias:{
-            dingding: path.resolve(__dirname,'./src/child')
-        }
+        // alias:{
+        //     dingding: path.resolve(__dirname,'./src/child')
+        // }
     },
     // devtool: "source-map",
     devServer: {
@@ -54,6 +55,9 @@ module.exports = {
         template: 'src/index.html'
         }),
         new CleanWebpackPlugin(),
+        new AddAssetsHtmlPlugin({
+            filepath: path.resolve(__dirname,'dll/vendors.dll.js')
+        }),
         new webpack.HotModuleReplacementPlugin()
     ],
     output: {

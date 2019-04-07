@@ -1,12 +1,11 @@
 import "@babel/polyfill"
 import React,{ Component } from 'react'
 import ReactDom from 'react-dom'
-import Child from "dingding"
+import _ from 'lodash'
 class App extends Component {
     render() {
         return <div>
-            <div>App</div>
-            <Child/>
+            <div>{_.join(['This','is','app'])}</div>
         </div>
     }
 }
