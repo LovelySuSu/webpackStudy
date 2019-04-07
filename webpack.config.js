@@ -7,7 +7,14 @@ const webpack = require('webpack')
 
 const plugins = [
     new HtmlWebpackPlugin({
-        template: 'src/index.html'
+        template: 'src/index.html',
+        filename: 'index.html',
+        chunks: ['vendors','main']
+    }),
+    new HtmlWebpackPlugin({
+        template: 'src/index.html',
+        filename: 'list.html',
+        chunks: ['vendors','list']
     }),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin()
@@ -32,6 +39,7 @@ module.exports = {
     // 等同于
     entry: {
             main: './src/index.js',
+            list: './src/list.js'
             // sub: './src/index.js'
     },
     resolve: {

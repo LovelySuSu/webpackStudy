@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server",
+    "build": "webpack",
     "build:dll": "webpack --config webpack.dll.js",
     "server": "node server.js"
   },
